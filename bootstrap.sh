@@ -15,7 +15,7 @@ sudo apt-get install git -y
 sudo apt-get install openjdk-7-jdk ant expect -y
 curl -sL https://deb.nodesource.com/setup | sudo bash -
 sudo apt-get install nodejs -y
-sudo npm install -g gulp cordova ionic -y
+sudo npm install -g gulp cordova ionic karma-cli bower phantomjs -y
 
 expect -c '
 set timeout -1   ;
