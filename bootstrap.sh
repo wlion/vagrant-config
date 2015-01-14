@@ -1,6 +1,8 @@
 ANDROID_SDK_FILENAME=android-sdk_r23.0.2-linux.tgz
 ANDROID_SDK=http://dl.google.com/android/$ANDROID_SDK_FILENAME
 
+mkdir /vagrant/dev
+
 sudo apt-get update -y
 sudo apt-get install curl -y
 
