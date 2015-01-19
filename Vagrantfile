@@ -3,6 +3,7 @@ Vagrant.configure("2") do |config|
 	config.vm.provision :shell, path: "bootstrap.sh"
 	config.vm.provision :shell, path: "adb.sh", run: "always"
 	config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.gitconfig")}' > '/home/vagrant/.gitconfig'"
+	config.vm.provision :shell, :inline => "cat >> /home/vagrant/.ssh/id_rsa <<EOF #{git_ssh_key} EOF"
 	config.vm.network :forwarded_port, host: 8100, guest: 8100
 	config.vm.network :forwarded_port, host: 35729, guest: 35729
 	config.ssh.forward_agent = true
